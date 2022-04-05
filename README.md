@@ -74,3 +74,8 @@ Run the evaluation file.
 ```
 python Evaluation_PDP-Net.py
 ```
+
+## Visualization
+
+Please refer to my aother repository:
+https://github.com/QifHE/3D-Point-Cloud-Rendering-with-Mitsuba
