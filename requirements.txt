@@ -1,0 +1,10 @@
+open3d==0.9
+trimesh
+visdom
+Cython==0.29.20
+matplotlib
+rich
+plyfile
+sklearn
+tqdm
+tensorboard
