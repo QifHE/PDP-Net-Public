@@ -23,7 +23,7 @@ Use the below to install Pytorch.
 pip install torch==1.4.0+cu100 torchvision==0.5.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
-### 3090Ti
+### 3090
  - Python 3.7
  - Pytorch 1.7.0
  - CUDA 11.0
