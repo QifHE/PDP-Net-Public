@@ -3,7 +3,6 @@ trimesh
 visdom
 Cython==0.29.20
 matplotlib
-rich
 plyfile
 sklearn
 tqdm
