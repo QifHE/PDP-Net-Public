@@ -33,6 +33,14 @@ pip install torch==1.4.0+cu100 torchvision==0.5.0+cu100 -f https://download.pyto
 ```
 pip install torch==1.7.0+cu110 torchvision==0.8.1+cu110 torchaudio===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
 ```
+For the possible failure of CUDA extension complilation, add the below to your .bashrc file.
+```
+export TORCH_CUDA_ARCH_LIST="8.0+PTX"
+``` 
+Then
+```
+source .bashrc
+```
 ### Other Dependency
 ```
 pip install -r requirements.txt
