@@ -74,6 +74,9 @@ Please refer to PoinTr repository for obtaining the datasets: [PoinTr Datasets](
 ### Dataset Loading
 In ./dataset directory, I have provided codes for loading the above three datasets. Please modify the pathes to the data before use them.
 
+## Trained Models
+Coming soon.
+
 ## Training
 Modify the path in train_PDP-Net.py
 ```
