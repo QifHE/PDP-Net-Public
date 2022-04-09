@@ -15,14 +15,17 @@ The codes have been tested under following settings.
 
 ### 2080Ti / TITAN
  - Python 3.7
- - Pytorch 1.4.0
- - CUDA 10.0
+ - Pytorch 1.4.0 / 1.5.0
+ - CUDA 10.0 / 10.2
 
-Use the below to install Pytorch.
+Use the below to install Pytorch 1.4.0 (CUDA 10.0).
 ```
 pip install torch==1.4.0+cu100 torchvision==0.5.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html
 ```
-
+Use the below to install Pytorch 1.5.0 (CUDA 10.2).
+```
+pip install torch==1.5.0 torchvision==0.6.0
+```
 ### 3090
  - Python 3.7
  - Pytorch 1.7.0
@@ -41,11 +44,14 @@ Then
 ```
 source .bashrc
 ```
+Note that other Pytorch and CUDA versions might be supported as well, you can find the installation here:
+[INSTALLING PREVIOUS VERSIONS OF PYTORCH](https://pytorch.org/get-started/previous-versions/)
+
 ### Other Dependency
 ```
 pip install -r requirements.txt
 ```
-### CUDA Extensions
+#### CUDA Extensions
 ```
 extensions
 ├── chamfer_dist
@@ -61,6 +67,18 @@ If your CUDA or torch versions have been changed, the built files should be dele
 ```python
 python setup.py clean
 ```
+#### Path Redirection
+Make sure that your pathes is properly set before running any script. The pathes that you have to modify are shown below.
+
+Modify the path in the following files:
+1. train_PDP-Net.py
+2. Evaluation_PDP-Net.py
+3. ./dataset/ShapeNet55Dataset.py
+4. ./dataset/PCNDataset.py
+```
+sys.path.append("//path//to//the//repo//")
+```
+In addition, also make sure that the dataset path is properly set in train_PDP-Net.py and Evaluation_PDP-Net.py.
 
 ## Dataset
 ### ShapeNet-Part Dataset
@@ -78,25 +96,11 @@ In ./dataset directory, I have provided codes for loading the above three datase
 Coming soon.
 
 ## Training
-Modify the path in train_PDP-Net.py
-```
-sys.path.append("//path//to//the//repo//")
-```
-
-Run the training file.
-
 ```
 python train_PDP-Net.py
 ```
 
 ## Evaluation
-Modify the path in Evaluation_PDP-Net.py
-```
-sys.path.append("//path//to//the//repo//")
-```
-
-Run the evaluation file.
-
 ```
 python Evaluation_PDP-Net.py
 ```

@@ -9,7 +9,7 @@ import torch.utils.data as data
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-sys.path.append("/home/heqifeng/PDP-NET")
+sys.path.append("//path//to//the//repo//")
 from extensions.pointnet2_ops_lib.pointnet2_ops.pointnet2_utils import (
     ball_query, furthest_point_sample, gather_operation, grouping_operation,
     three_interpolate, three_nn)

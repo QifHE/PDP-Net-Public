@@ -13,7 +13,7 @@ from torch.utils.tensorboard import SummaryWriter
 sys.path.append("//path//to//the//repo//")
 from dataset.ShapeNetDataset import *
 from extensions.chamfer_dist import ChamferDistance
-from models.PDP-Net import PDP_Net_Model
+from models.PDP_Net import PDP_Net_Model
 from utils.metrics import AverageValueMeter
 from utils.utils import save_model, save_paths, weights_init
 
@@ -31,7 +31,7 @@ parser.add_argument('--lrate_decay', type=float, default=0.7, help='lr decay rat
 opt = parser.parse_args()
 
 ##### Initialize Variables #####
-dir_name, logname  = save_paths(opt.model, "train_PDP-Net", "ShapeNetDataset", "PDP-Net")
+dir_name, logname  = save_paths(opt.model, "train_PDP-Net", "ShapeNetDataset", "PDP_Net")
 
 loss_train = AverageValueMeter()
 loss_test = AverageValueMeter()
